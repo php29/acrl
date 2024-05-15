@@ -1,0 +1,405 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Gothic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+/* @import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css"; */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+  Note: The styles for this gradient grid background is heavily inspired by the creator of this amazing site (https://dub.sh) – all credits go to them! 
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Tailwind Styles */
+
+
+.heading_font {
+  font-family: "League Gothic", serif;
+}
+
+.heading_text {
+  @apply text-7xl lg:text-8xl my-10 lg:my-5 xl:my-10 heading_font text-main;
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  @apply text-4xl font-bold my-5;
+}
+/* navbar ----------------------------------------------------------------------------------- */
+
+.flip {
+  rotate: 180deg;
+}
+
+.nav_item {
+  @apply text-base px-3 no-underline flex;
+}
+
+.dropdown {
+  @apply float-left overflow-hidden;
+}
+
+.dropdown_content {
+  @apply bg-[#f9f9f9] text-white w-full left-0 z-10;
+}
+
+.header_row {
+  @apply bg-main text-white;
+}
+
+.location_hover {
+  color: white;
+}
+.location_hover:hover {
+  color: #B7040B;
+  /* -webkit-transition: ease-in; */
+  -webkit-transition: color 300ms; /* For Safari */
+  transition: color 300ms;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+} 
+/* Track */
+::-webkit-scrollbar-track {
+  background: #c4c4c4;
+  border: solid 3px transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border: solid 8px transparent;
+  background: #B7040B; 
+  border-radius: 9999px;
+}
+
+/* rooms and suites carousel ----------------------------------------------------------------------------------- */
+
+.slick-dots {
+  display: flex;
+  width: 100%;
+	/* justify-content: center;
+	align-items: center; */
+	
+	margin: 0;
+	padding: 1rem 0;
+	
+	list-style-type: none;
+}
+.slick-dots li {
+    margin: 0 0.25rem;
+}
+.slick-dots li button {
+  display: block;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin: auto;
+  
+  border: none;
+  border-radius: 100%;
+  background-color: #999999;
+  
+  text-indent: -9999px;
+}
+
+.slick-dots li.slick-active button {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  padding: 0;
+  background-color: red;
+}
+
+/* room page carousel ----------------------------------------------------------------------------------- */
+
+.slick-dots ul.room_page {
+  display: flex;
+  width: 100%;
+	justify-content: center;
+	align-items: center;
+	
+	margin: 0;
+	padding: 1rem 0;
+	
+	list-style-type: none;
+}
+.slick-dots ul.room_page li {
+  margin: 0 0.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slick-dots ul.room_page li button {
+  display: block;
+  width: 0.75rem;
+  height: 0.75rem;
+  /* padding: auto; */
+  border: none;
+  border-radius: 100%;
+  background-color: #999999;
+  
+  text-indent: -9999px;
+}
+
+.slick-dots ul.room_page li.slick-active button {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  margin: auto;
+  background-color: #fff;
+}
+
+
+/* gallery ------------------------------------------------------------------------------------------ */
+
+.right_to_left {
+  animation: right_to_left 120s infinite linear;
+}
+.right_to_left:hover {
+  animation-play-state: paused;
+}
+.redCircle {
+  animation: redCircle 40s infinite linear;
+}
+.orangeCircle {
+  animation: orangeCircle 40s infinite linear;
+}
+.greenCircle {
+  animation: greenCircle 40s infinite linear;
+}
+.blueCircle {
+  animation: blueCircle 40s infinite linear;
+}
+.yellowCircle {
+  animation: yellowCircle 40s infinite linear;
+}
+.imgCls {
+  border-radius: 15%;
+}
+
+@keyframes redCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  1% {
+    transform: rotate(90deg);
+  }
+  10% {
+    transform: rotate(90deg);
+  }
+  11% {
+    transform: rotate(180deg);
+  }
+  20% {
+    transform: rotate(180deg);
+  }
+  21% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  51% {
+    transform: rotate(-90deg);
+  }
+  70% {
+    transform: rotate(-90deg);
+  }
+  71% {
+    transform: rotate(-180deg);
+  }
+  90% {
+    transform: rotate(-180deg);
+  }
+  91% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes orangeCircle {
+  0% {
+    transform: rotate(180deg);
+  }
+  1% {
+    transform: rotate(270deg);
+  }
+  20% {
+    transform: rotate(270deg);
+  }
+  21% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  51% {
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  61% {
+    transform: rotate(180deg);
+  }
+  70% {
+    transform: rotate(180deg);
+  }
+  71% {
+    transform: rotate(270deg);
+  }
+  90% {
+    transform: rotate(270deg);
+  }
+  91% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes greenCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  1% {
+    transform: rotate(180deg);
+  }
+  10% {
+    transform: rotate(180deg);
+  }
+  11% {
+    transform: rotate(90deg);
+  }
+  40% {
+    transform: rotate(90deg);
+  }
+  41% {
+    transform: rotate(270deg);
+  }
+  50% {
+    transform: rotate(270deg);
+  }
+  51% {
+    transform: rotate(180deg);
+  }
+  80% {
+    transform: rotate(180deg);
+  }
+  81% {
+    transform: rotate(90deg);
+  }
+  90% {
+    transform: rotate(90deg);
+  }
+  91% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes blueCircle {
+  0% {
+    transform: rotate(90deg);
+  }
+  10% {
+    transform: rotate(90deg);
+  }
+  11% {
+    transform: rotate(180deg);
+  }
+  20% {
+    transform: rotate(180deg);
+  }
+  21% {
+    transform: rotate(90deg);
+  }
+  30% {
+    transform: rotate(90deg);
+  }
+  31% {
+    transform: rotate(270deg);
+  }
+  60% {
+    transform: rotate(270deg);
+  }
+  61% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+  81% {
+    transform: rotate(180deg);
+  }
+  90% {
+    transform: rotate(180deg);
+  }
+  91% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes yellowCircle {
+  0% {
+    transform: rotate(90deg);
+  }
+  20% {
+    transform: rotate(90deg);
+  }
+  21% {
+    transform: rotate(270deg);
+  }
+  30% {
+    transform: rotate(270deg);
+  }
+  31% {
+    transform: rotate(360deg);
+  }
+  40% {
+    transform: rotate(360deg);
+  }
+  41% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  51% {
+    transform: rotate(180deg);
+  }
+  70% {
+    transform: rotate(180deg);
+  }
+  71% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+  81% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes right_to_left {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
